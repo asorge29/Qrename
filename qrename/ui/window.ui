@@ -23,7 +23,7 @@
       </size>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>Load some files to get started.</string>
      </property>
     </widget>
    </item>

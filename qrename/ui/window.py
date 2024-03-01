@@ -56,7 +56,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Qrename"))
-        self.imageDisplay.setText(_translate("Form", "TextLabel"))
+        self.imageDisplay.setText(_translate("Form", "Load some files to get started."))
         self.itemsRemaining.setText(_translate("Form", "Remaining in Queue: 500"))
         self.loadButton.setText(_translate("Form", "Load New Files"))
         self.label_3.setText(_translate("Form", "New Name:"))
