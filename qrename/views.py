@@ -9,6 +9,7 @@ class Window(QWidget, Ui_Form):
         self._fileQueue = []
         self._queueSize = len(self._fileQueue)
         self._currentFile = None
+        self.setWindowIcon(QtGui.QIcon("Qrename_Logo.jpeg"))
         self._setupUI()
         self._connectSignals()
 
