@@ -43,19 +43,6 @@ Qrename is a powerful tool designed to streamline the process of renaming multip
 
 6. **Complete**: Once all images have been renamed, Qrename returns to the initial state, ready for the next batch of files.
 
-## Example
-
-```python
-from PyQt5.QtWidgets import QApplication
-from qrename.window import Window
-
-if __name__ == "__main__":
-    app = QApplication([])
-    window = Window()
-    window.show()
-    app.exec_()
-```
-
 ## Contribution
 
 Contributions to Qrename are welcome! Whether it's bug fixes, feature enhancements, or localization efforts, feel free to contribute by forking the repository and submitting a pull request.
