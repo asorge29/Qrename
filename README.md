@@ -2,6 +2,8 @@
 
 Qrename is a powerful tool designed to streamline the process of renaming multiple image files. Whether you're managing a vast local library archive or organizing personal collections, Qrename simplifies the renaming process with efficiency and ease.
 
+![Qrename Logo](Qrename_Logo.jpeg)
+
 ## Features
 
 - **Bulk Renaming**: Queue up multiple image files and rename them sequentially with customized names.
