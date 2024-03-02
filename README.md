@@ -14,7 +14,7 @@ Qrename is a powerful tool designed to streamline the process of renaming multip
 1. **Clone the Repository**: Begin by cloning the Qrename repository to your local machine.
 
    ```bash
-   git clone https://github.com/your-username/qrename.git
+   git clone https://github.com/BassMaster629/Qrename.git
    ```
 
 2. **Install Dependencies**: Qrename utilizes PyQt5 for the graphical interface. Ensure you have PyQt5 installed. You can install it via pip:
