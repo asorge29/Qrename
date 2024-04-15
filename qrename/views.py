@@ -47,7 +47,16 @@ class Window(QWidget, Ui_Form):
             self._stateNewFiles()
 
     def _renameFile(self):
-        self._currentFile.rename(self._currentFile.parent.joinpath(f'{self.newName.text()}{self._currentFile.suffix}'))
+        if not Path.exists(self._currentFile.parent.joinpath(f'{self.newName.text()}{self._currentFile.suffix}')):
+            self._currentFile.rename(self._currentFile.parent.joinpath(f'{self.newName.text()}{self._currentFile.suffix}'))
+        else:
+            count = 1
+            while True:
+                if not Path.exists(self._currentFile.parent.joinpath(f'{self.newName.text()}({count}){self._currentFile.suffix}')):
+                    self._currentFile.rename(self._currentFile.parent.joinpath(f'{self.newName.text()}({count}){self._currentFile.suffix}'))
+                    break
+                else:
+                    count += 1
         self._nextFile()
 
     def _nextFile(self):
