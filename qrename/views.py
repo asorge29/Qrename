@@ -22,6 +22,7 @@ class Window(QWidget, Ui_Form):
         self.newName.textChanged.connect(self._enableRename)
         self.renameButton.clicked.connect(self._renameFile)
         self.newName.returnPressed.connect(self._renameFile)
+        self.deleteButton.clicked.connect(self._deleteFile)
 
     def _stateNoFiles(self):
         self.renameButton.setDisabled(True)
@@ -69,3 +70,7 @@ class Window(QWidget, Ui_Form):
             self._currentFile = self._fileQueue[0]
             self.imageDisplay.setPixmap(QtGui.QPixmap(str(self._currentFile)))
             self.itemsRemaining.setText(f'Remaining in Queue: {self._queueSize - 1}')
+
+    def _deleteFile(self):
+        self._currentFile.unlink()
+        self._nextFile()
