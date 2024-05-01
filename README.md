@@ -6,30 +6,51 @@ Qrename is a powerful tool designed to streamline the process of renaming multip
 
 ## Features
 
-- **Bulk Renaming**: Queue up multiple image files and rename them sequentially with customized names.
+- **Bulk Renaming**: Queue up multiple image files and rename them individually with individualized names.
 - **Image Preview**: Preview each image before renaming, ensuring accuracy in the renaming process.
 - **Flexible File Selection**: Select multiple image files at once using a file dialog.
 - **Supported Formats**: Qrename supports common image formats such as PNG, JPG, BMP, and JPEG.
 
 ## Getting Started
 
-1. **Clone the Repository**: Begin by cloning the Qrename repository to your local machine.
+Qrename is a fully portable tool, requiring no installation or setup. It provides builds for Windows, Linux, and macOS platforms, ensuring compatibility across different operating systems.
 
-   ```bash
-   git clone https://github.com/BassMaster629/Qrename.git
-   ```
+### Using Pre-built Binaries
 
-2. **Install Dependencies**: Qrename utilizes PyQt5 for the graphical interface. Ensure you have PyQt5 installed. You can install it via pip:
+To get started quickly, download the appropriate binary for your operating system from the [Releases](https://github.com/asorge29/Qrename/releases) page on GitHub. Once downloaded, simply unzip the file and run Qrename directly without any installation process.
 
-   ```bash
-   pip install pyqt5
-   ```
+### Building from Source
 
-3. **Run Qrename**: Execute the Qrename tool by running the following command:
+For advanced users or those who prefer to build from source, Qrename's codebase is available on GitHub. Follow these steps to build Qrename locally:
 
-   ```bash
-   python qrename.py
-   ```
+1. **Clone the Repository**: Clone the Qrename repository to your local machine using Git.
+
+```bash
+git clone https://github.com/asorge29/Qrename.git
+```
+
+2. **Install Dependencies**: Ensure you have Python installed on your system. Navigate to the cloned repository directory and install the required dependencies using pip.
+
+```bash
+pip install -r requirements.txt
+```
+
+
+3. **Build with PyInstaller**: Use PyInstaller to create a standalone executable for your platform. Run the following command:
+
+```bash
+pyinstaller --noconfirm --onefile --windowed --icon "C:/Users/path/to/cloned/repo/Qrename/qrename_logo_icon.ico" --splash "C:/Users/path/to/cloned/repo/Qrename/Qrename_Logo.jpeg" --add-data "C:/Users/path/to/cloned/repo/Qrename/Qrename_Logo.jpeg;."  "C:/Users/path/to/cloned/repo/Qrename/Qrename.py"
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will generate the executable file in the `dist` directory.
+
+4. **Alternative: Auto Py to Exe**: Alternatively, if you prefer using Auto Py to Exe, you can utilize the provided configuration file (`auto-py-to-exe qrename onefile.json`) to build Qrename. Simply open Auto Py to Exe, load the configuration file, and generate the executable.
+
+Ensure to replace `"path/to/cloned/repo"` with the actual path to your cloned repository in the JSON configuration file or in the command above.
+
+Note: When building locally on MacOS, it is necessary to omit the splash screen and use the icon file ending in `.icns` rather than `.ico`
+
+By following these steps, you can build Qrename locally and customize it according to your preferences.
 
 ## Usage
 
@@ -37,7 +58,7 @@ Qrename is a powerful tool designed to streamline the process of renaming multip
 
 2. **Preview Images**: The selected images will be displayed one by one. Ensure correctness by reviewing each image before renaming.
 
-3. **Rename Images**: Enter the desired name for the image in the text field provided. Press Enter or click the "Rename" button to apply the new name to the image.
+3. **Rename or Delete Images**: Enter the desired name for the image in the text field provided. Press Enter or click the "Rename" button to apply the new name to the image. If you decide you would nto like to keep the image, press the delete button to permanately delete it.
 
 4. **Sequential Renaming**: Qrename renames images sequentially based on the order in which they were loaded. After renaming an image, the next image in the queue is automatically displayed.
 
@@ -49,14 +70,6 @@ Qrename is a powerful tool designed to streamline the process of renaming multip
 
 Contributions to Qrename are welcome! Whether it's bug fixes, feature enhancements, or localization efforts, feel free to contribute by forking the repository and submitting a pull request.
 
-## Releases
-
-You can find pre-packaged releases for Windows and macOS on the [Releases](https://github.com/your-username/qrename/releases) page. Currently, there are no installers available, but packaged versions are provided for convenience. 
-
 ## License
 
 Qrename is licensed under the GNU General Public License v3.0 (GPL-3.0). See the [LICENSE](LICENSE) file for details.
-
----
-
-Happy Renaming with Qrename! If you encounter any issues or have suggestions for improvement, don't hesitate to reach out. Your feedback is highly appreciated.
